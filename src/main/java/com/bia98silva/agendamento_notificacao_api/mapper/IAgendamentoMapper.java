@@ -1,4 +1,4 @@
-package com.bia98silva.agendamento_notificacao_api.repositories;
+package com.bia98silva.agendamento_notificacao_api.mapper;
 
 import com.bia98silva.agendamento_notificacao_api.dto.in.AgendamentoRecord;
 import com.bia98silva.agendamento_notificacao_api.dto.out.AgendamentoRecordOut;

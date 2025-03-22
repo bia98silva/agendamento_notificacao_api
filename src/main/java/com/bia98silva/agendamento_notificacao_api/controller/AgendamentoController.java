@@ -5,10 +5,7 @@ import com.bia98silva.agendamento_notificacao_api.dto.out.AgendamentoRecordOut;
 import com.bia98silva.agendamento_notificacao_api.service.AgendamentoService;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/agendamento")
@@ -25,4 +22,10 @@ private final AgendamentoService agendamentoService;
         return ResponseEntity.ok(agendamentoService.gravarAgendamento(agendamento));}
 
 
+    @GetMapping("/{id}")
+    public ResponseEntity<AgendamentoRecordOut> buscarAgendamentoPorId(@PathVariable("id")Long id){
+                return ResponseEntity.ok(agendamentoService.buscarAgendamentosPorid(id));}
+
 }
+
+
